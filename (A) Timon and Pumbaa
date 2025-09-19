@@ -1,0 +1,25 @@
+
+using namespace std;
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <iomanip> 
+#include<cmath>
+#include<bitset>
+
+
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+
+	if (a > b)
+	{
+		cout << a - b;
+	}
+	else
+	{
+		cout << 0;
+	}
+}
