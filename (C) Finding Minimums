@@ -1,0 +1,43 @@
+
+using namespace std;
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <iomanip> 
+#include<cmath>
+#include<bitset>
+
+
+int main()
+{
+	int N,K,n;
+	cin >> N >> K;
+
+	int min,first=1,counter=0;
+
+	for (int i = 0; i < N; i++)
+	{
+		cin >> n;
+
+		if (first)
+		{
+			min = n;
+			first = 0;
+		}
+		else if (n<min)
+		{
+			min = n;
+		}
+
+		counter++;
+		if (counter >= K || i == N - 1)
+		{
+			counter = 0;
+			first = 1;
+
+			cout << min<<" ";
+		}
+	}
+	
+}
