@@ -1,0 +1,41 @@
+
+using namespace std;
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <iomanip> 
+#include<cmath>
+#include<bitset>
+
+
+
+
+
+
+
+int main()
+{
+	//4 seats
+    long long id;
+    cin >> id;
+
+    long long row = id / 4;
+    long long pos = id % 4;
+
+    long long col;
+    if (row % 2 == 0)
+    {
+        col = pos;
+    }
+
+    else
+    {
+        col =3- pos ;
+    }
+
+    cout << row << " " << col << "\n";
+	
+
+
+}
