@@ -1,0 +1,51 @@
+
+using namespace std;
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <iomanip> 
+#include<cmath>
+#include<bitset>
+
+
+
+
+
+
+
+int main()
+{
+	
+    int T;
+    cin >> T;
+    while (T--) {
+        long long n, s;
+        cin >> n >> s;
+
+        long long maxSum = n * (n + 1) / 2;
+        if (s > maxSum) {
+            cout << -1 << "\n";
+            continue;
+        }
+
+        long long temp = s;
+        for (long long i = n; i >= 1; i--) {
+            if (i <= temp) {
+                cout << i << " ";
+                temp -= i;
+            }
+        }
+
+        if (temp != 0) {
+            cout << -1; 
+        }
+
+        cout << "\n";
+    }
+}
+
+
+
+
+
