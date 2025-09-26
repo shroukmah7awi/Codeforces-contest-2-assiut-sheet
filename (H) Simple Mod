@@ -1,0 +1,48 @@
+
+using namespace std;
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <iomanip> 
+#include<cmath>
+#include<bitset>
+
+
+
+
+
+
+
+int main()
+{
+	long long n;
+    cin >> n;
+
+    if (n > 1000000000) {
+        cout << 0 << " " << 0;
+        return 0;
+    }
+
+    bool find = false;
+
+    for (long long x = 0; x <= 1000000 && !find; x++) {
+        for (long long y = 0; y <= 1000000 && !find; y++) {
+            long long sum = (x * x) + (y * y);
+
+            if (sum % n == 0) {
+                cout << x << " " << y;
+                find = true;
+            }
+        }
+    }
+
+    if (!find) {
+        cout << "No solutions";
+    }
+}
+
+
+
+
+
